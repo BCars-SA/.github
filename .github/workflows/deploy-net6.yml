@@ -8,15 +8,11 @@ env:
 
 on: 
   workflow_call:
-  workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to deploy'
         required: true
-        type: choice  
-        options:          
-          - production
-          - dev
+        type: string  
       build_before:
         description: 'Build before deployment?'
         required: true
