@@ -24,15 +24,15 @@ on:
         type: string
 
 jobs:
-  build:
+  #build:
     # This job will only run if 'build_before' is checked
-    if: ${{ github.event.inputs.build_before == 'true'}}
-    uses: ./.github/workflows/build.yml
+    #if: ${{ github.event.inputs.build_before == 'true'}}
+    #uses: ./.github/workflows/build.yml
     
   deploy:
     runs-on: [self-hosted, windows, x64]
-    needs: build
-    if: ${{ always() && needs.build.result != 'failure' }}
+    #needs: build
+    #if: ${{ always() && needs.build.result != 'failure' }}
     env:
       target: ${{ github.event.inputs.target }}
     steps:  
