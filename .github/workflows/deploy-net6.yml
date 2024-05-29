@@ -12,11 +12,10 @@ on:
         description: 'Environment to deploy'
         required: true
         type: string  
-      build_before:
-        description: 'Build before deployment?'
-        required: true
-        type: boolean
-        default: true
+      build_workflow:
+        description: 'Build workflow absolute path'
+        required: false
+        type: string
       target:
         description: 'Specific target server (domain name or address)'
         required: true
@@ -25,8 +24,8 @@ on:
 jobs:
   build:
     # This job will only run if 'build_before' is checked
-    if: ${{ inputs.build_before == 'true'}}
-    uses: ${{ github.event.repository.full_name }}/.github/workflows/build.yml@main
+    if: ${{ inputs.build_workflow != '' }}
+    uses: ${{ inputs.build_workflow }}
     
   deploy:
     runs-on: [self-hosted, windows, x64]
