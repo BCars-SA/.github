@@ -1,5 +1,4 @@
 name: "Deploy: .NET 6 Service"
-run-name: "Deploying  ${{ github.event.inputs.service }} to ${{ github.event.inputs.environment }} ${{ github.event.inputs.target }}"
 
 env:
   TARGET_BASE_PATH: "c$/dev"
@@ -41,7 +40,7 @@ jobs:
      
       - name: "Copy 'Release' folder"
         run: |
-          $sourcePath = "${{ env.SERVICE_DIR }}/bin/Release/6.0"
+          $sourcePath = "${{ env.SERVICE_DIR }}/bin/Release/net6.0"
           $targetPath = "\\${{ env.target }}\${{ env.TARGET_BASE_PATH }}\${{ env.JOB_NAME }}\r${{ github.run_number }}\"
           echo "Deploying to $targetPath"
           if (!(Test-Path -Path $targetPath)) {
