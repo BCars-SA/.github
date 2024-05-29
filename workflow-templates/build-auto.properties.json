@@ -1,0 +1,4 @@
+{
+    "name": "Build automatically Workflow",
+    "description": "Triggers build.yml from the same repository on pull request / commit "
+}
