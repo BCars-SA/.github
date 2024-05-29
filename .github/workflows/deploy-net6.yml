@@ -7,6 +7,7 @@ env:
   JOB_NAME: "${{ github.event.repository.name }}"
 
 on: 
+  workflow_call:
   workflow_dispatch:
     inputs:
       environment:
