@@ -1,0 +1,17 @@
+name: "Build automatically"
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '.github/workflows/**'
+      - '!.github/workflows/build.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:
+      - '.github/workflows/**'
+      - '!.github/workflows/build.yml'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
