@@ -2,6 +2,10 @@ name: Build React App
 
 on:
   workflow_call:
+    inputs:
+      working-directory:
+        type: string
+        default: "."
 
 jobs:
   build:
@@ -18,4 +22,6 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci                         # Install dependencies (faster than npm install)
+        working-directory: ${{ inputs.working-directory }}
       - run: npm run build                  # Build the React app
+        working-directory: ${{ inputs.working-directory }}
