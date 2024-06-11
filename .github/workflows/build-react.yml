@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '18'                 # Specify Node.js version
           cache: 'npm'                       # Cache npm dependencies for speed
-          cache-dependency-path: '${{ inputs.working-directory }}/package-lock.json'
+          
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
