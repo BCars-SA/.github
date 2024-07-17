@@ -27,3 +27,4 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('${{ inputs.working-directory }}/package-lock.json') }}
       - run: npm ci                         # Install dependencies (faster than npm install)        
       - run: npm run build                  # Build the React app        
+      - run: npm run test                   # Test React app
