@@ -3,11 +3,19 @@ name: "Build: .NET 6.0.x"
 
 on: 
   workflow_dispatch:
+    inputs:
+      runner:
+        type: string
+        default: 'ubuntu-latest' # 'self-hosted, windows, x64'
   workflow_call:
+    inputs:
+      runner:
+        type: string
+        default: 'ubuntu-latest' # 'self-hosted, windows, x64'
   
 jobs:
   build:
-    runs-on: [self-hosted, windows, x64]
+    runs-on: ${{ fromJSON(inputs.runner) }}
     #runs-on: ubuntu-latest
 
     steps:
