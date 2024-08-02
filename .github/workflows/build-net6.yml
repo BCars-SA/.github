@@ -6,10 +6,12 @@ on:
     inputs:
       runner:
         type: string
-        default: "['self-hosted', 'windows', 'x64']" # "ubuntu-latest"
+        # examples: "'ubuntu-latest'", "'self-hosted'", "['self-hosted', 'windows', 'x64']"
+        default: "['self-hosted', 'windows', 'x64']" 
   
 jobs:
   build:
+    # inputs.runner MUST BE json-friendly
     runs-on: ${{fromJSON(inputs.runner)}}
     
     steps:
