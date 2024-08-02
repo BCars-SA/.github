@@ -6,7 +6,7 @@ on:
     inputs:
       runner:
         type: string
-        default: "self-hosted, windows, x64" # "ubuntu-latest"
+        default: "['self-hosted', 'windows', 'x64']" # "ubuntu-latest"
   
 jobs:
   build:
