@@ -6,13 +6,12 @@ on:
     inputs:
       runner:
         type: string
-        default: "ubuntu-latest" # "self-hosted, windows, x64"
+        default: "self-hosted, windows, x64" # "ubuntu-latest"
   
 jobs:
   build:
     runs-on: ${{inputs.runner}}
-    #runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
