@@ -1,8 +1,8 @@
-# BCars SA
+# Bcars SA
 
 **Technology-First B2B Car Import Solutions**
 
-Based in Switzerland, **BCars SA** is redefining the European automotive trade. We specialize in the direct import of new vehicles, serving as a vital bridge between global markets and professional garages.
+Based in Switzerland, **Bcars SA** is redefining the European automotive trade. We specialize in the direct import of new vehicles, serving as a vital bridge between global markets and professional garages.
 
 Unlike traditional importers, we place technology at our core. With over **20 years of experience** developing in-house software, we have built a robust infrastructure that automates, simplifies, and accelerates the vehicle sourcing process for our partners.
 
