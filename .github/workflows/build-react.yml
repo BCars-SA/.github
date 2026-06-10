@@ -12,6 +12,8 @@ on:
 
 jobs:
   build:
+    # set timeout
+    timeout-minutes: 10
     runs-on: [ubuntu-latest]
     defaults:
       run:
