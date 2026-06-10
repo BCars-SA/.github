@@ -11,6 +11,8 @@ on:
   
 jobs:
   build:
+    # set timeout
+    timeout-minutes: 10
     # inputs.runner MUST BE json-friendly
     runs-on: ${{fromJSON(inputs.runner)}}
     
