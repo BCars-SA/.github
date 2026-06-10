@@ -11,6 +11,8 @@ on:
                 type: string
 jobs:
   build:
+    # set timeout
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     name: "Docker: setup and build"
     steps:
